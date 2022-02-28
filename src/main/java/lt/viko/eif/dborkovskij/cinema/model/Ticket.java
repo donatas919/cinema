@@ -1,4 +1,54 @@
 package lt.viko.eif.dborkovskij.cinema.model;
 
 public class Ticket {
+    private float price;
+    private Film film;
+    private TheaterRoom theaterRoom;
+    private Seat seat;
+    private int date;
+
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public Film getFilm() {
+        return film;
+    }
+
+    public void setFilm(Film film) {
+        this.film = film;
+    }
+
+    public TheaterRoom getTheaterRoom() {
+        return theaterRoom;
+    }
+
+    public void setTheaterRoom(TheaterRoom theaterRoom) {
+        this.theaterRoom = theaterRoom;
+    }
+
+    public Seat getSeat() {
+        return seat;
+    }
+
+    public void setSeat(Seat seat) {
+        this.seat = seat;
+    }
+
+    public int getDate() {
+        return date;
+    }
+
+    public void setDate(int date) {
+        this.date = date;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("\tPrice: %f\n\t\t\tFilm: %s\n\t\t\tTheater room: %d\n\t\t\t%s\n\t\t\tDate: %d", price, film, theaterRoom.getRoomNumber(), seat, date);
+    }
 }
