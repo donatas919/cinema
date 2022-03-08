@@ -2,8 +2,14 @@ package lt.viko.eif.dborkovskij.cinema;
 
 import lt.viko.eif.dborkovskij.cinema.model.*;
 
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
+import java.io.IOException;
+import java.nio.file.Path;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws JAXBException, IOException {
 //        room
         TheaterRoom room01 = new TheaterRoom();
         room01.setRoomNumber(1);
@@ -49,6 +55,13 @@ public class Main {
         customer01.getTicketsList().add(ticket01);
 
         System.out.println(customer01);
+
+        JAXBContext jaxbContext = JAXBContext.newInstance(Customer.class);
+
+        Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+
+        Path fileName = Path.of("Customer.xml");
+        Path path = Path.of("Customer.xml");
 
     }
 }
