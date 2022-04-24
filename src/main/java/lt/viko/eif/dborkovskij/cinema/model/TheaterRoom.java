@@ -1,8 +1,11 @@
 package lt.viko.eif.dborkovskij.cinema.model;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 import java.util.ArrayList;
 import java.util.List;
 
+@XmlType(propOrder = {"roomNumber", "seatList"})
 public class TheaterRoom {
     private int roomNumber;
     private List<Seat> seatList = new ArrayList<>();
@@ -15,6 +18,7 @@ public class TheaterRoom {
         this.roomNumber = roomNumber;
     }
 
+    @XmlElement(name = "seatList")
     public List<Seat> getSeatList() {
         return seatList;
     }

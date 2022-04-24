@@ -13,7 +13,7 @@ public class Customers {
         return customerList;
     }
 
-    @XmlElement(name = "Customer")
+    @XmlElement(name = "customer")
     public void setCustomerList(List<Customer> customerList) {
         this.customerList = customerList;
     }

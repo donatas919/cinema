@@ -1,8 +1,11 @@
 package lt.viko.eif.dborkovskij.cinema.model;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 import java.util.ArrayList;
 import java.util.List;
 
+@XmlType(propOrder = {"name", "age", "moneyBalance", "ticketsList", "foodList"})
 public class Customer {
     private String name;
     private int age;
@@ -34,6 +37,7 @@ public class Customer {
         this.moneyBalance = moneyBalance;
     }
 
+    @XmlElement(name = "ticket")
     public List<Ticket> getTicketsList() {
         return ticketsList;
     }
@@ -42,6 +46,7 @@ public class Customer {
         this.ticketsList = ticketsList;
     }
 
+    @XmlElement(name = "food")
     public List<Food> getFoodList() {
         return foodList;
     }

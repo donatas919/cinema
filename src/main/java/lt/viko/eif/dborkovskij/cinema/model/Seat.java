@@ -1,5 +1,8 @@
 package lt.viko.eif.dborkovskij.cinema.model;
 
+import javax.xml.bind.annotation.XmlType;
+
+@XmlType(propOrder = {"row", "number"})
 public class Seat {
     private int row;
     private int number;
@@ -7,6 +10,9 @@ public class Seat {
     public Seat(int row, int number) {
         this.row = row;
         this.number = number;
+    }
+
+    public Seat() {
     }
 
     public int getRow() {

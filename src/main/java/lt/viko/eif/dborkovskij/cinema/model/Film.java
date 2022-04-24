@@ -1,5 +1,8 @@
 package lt.viko.eif.dborkovskij.cinema.model;
 
+import javax.xml.bind.annotation.XmlType;
+
+@XmlType(propOrder = {"name", "rating", "ageRestriction"})
 public class Film {
     private String name;
     private float rating;
@@ -14,6 +17,10 @@ public class Film {
     }
 
     public float getPrice() {
+        return rating;
+    }
+
+    public float getRating() {
         return rating;
     }
 

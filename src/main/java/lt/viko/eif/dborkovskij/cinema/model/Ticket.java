@@ -1,5 +1,9 @@
 package lt.viko.eif.dborkovskij.cinema.model;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlType(propOrder = {"price", "film", "theaterRoom", "seat", "date"})
 public class Ticket {
     private float price;
     private Film film;
@@ -15,6 +19,7 @@ public class Ticket {
         this.price = price;
     }
 
+    @XmlElement(name = "film")
     public Film getFilm() {
         return film;
     }
@@ -23,6 +28,7 @@ public class Ticket {
         this.film = film;
     }
 
+    @XmlElement(name = "theaterRoom")
     public TheaterRoom getTheaterRoom() {
         return theaterRoom;
     }
@@ -31,6 +37,7 @@ public class Ticket {
         this.theaterRoom = theaterRoom;
     }
 
+    @XmlElement(name = "seat")
     public Seat getSeat() {
         return seat;
     }
