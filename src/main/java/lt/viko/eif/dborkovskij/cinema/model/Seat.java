@@ -2,6 +2,10 @@ package lt.viko.eif.dborkovskij.cinema.model;
 
 import javax.xml.bind.annotation.XmlType;
 
+/**
+ * Creates an object seat with it's coordinates.
+ */
+
 @XmlType(propOrder = {"row", "number"})
 public class Seat {
     private int row;

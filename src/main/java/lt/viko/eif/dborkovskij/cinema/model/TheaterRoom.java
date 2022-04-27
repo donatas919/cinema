@@ -5,6 +5,10 @@ import javax.xml.bind.annotation.XmlType;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Hold the information of the room number and a list of sits it contains.
+ */
+
 @XmlType(propOrder = {"roomNumber", "seatList"})
 public class TheaterRoom {
     private int roomNumber;

@@ -5,6 +5,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This object contains a list of "Customer" objects.
+ * Uses overridden method toString() to print out the contents of the object in a list.
+ */
+
 @XmlRootElement
 public class Customers {
     private List<Customer> customerList = new ArrayList<>();

@@ -1,5 +1,9 @@
 package lt.viko.eif.dborkovskij.cinema.model;
 
+/**
+ * Stores the name and price of food.
+ */
+
 public class Food {
     private String name;
     private float price;

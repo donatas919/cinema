@@ -3,6 +3,11 @@ package lt.viko.eif.dborkovskij.cinema.model;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+/**
+ * Creates a ticket object that hold the information regarding the movie, where and when it will be,
+ * as well as the price of the ticket.
+ */
+
 @XmlType(propOrder = {"price", "film", "theaterRoom", "seat", "date"})
 public class Ticket {
     private float price;
@@ -21,7 +26,7 @@ public class Ticket {
 
     @XmlElement(name = "film")
     public Film getFilm() {
-        return film;
+       return film;
     }
 
     public void setFilm(Film film) {

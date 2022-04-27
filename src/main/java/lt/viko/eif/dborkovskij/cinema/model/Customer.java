@@ -5,6 +5,11 @@ import javax.xml.bind.annotation.XmlType;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Creates the object "Customer "and stores the information about that object.
+ * Uses overridden method toString() to print out the contents of the object in a list.
+ */
+
 @XmlType(propOrder = {"name", "age", "moneyBalance", "ticketsList", "foodList"})
 public class Customer {
     private String name;

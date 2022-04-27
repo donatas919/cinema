@@ -3,6 +3,7 @@ package lt.viko.eif.dborkovskij.cinema.service;
 import lt.viko.eif.dborkovskij.cinema.model.Customer;
 import lt.viko.eif.dborkovskij.cinema.model.Customers;
 
+import javax.swing.text.Document;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
@@ -12,6 +13,8 @@ import java.io.StringReader;
 import java.io.StringWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TransformerService {
     private static JAXBContext jaxbContext;
@@ -29,15 +32,14 @@ public class TransformerService {
 
         Customers customers = null;
         try {
-
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
 
             Path filePath = Path.of(fileName);
             String actual = Files.readString(filePath); // reading xml string from file
             System.out.print(actual);
             StringReader reader = new StringReader(actual);
-            customers = (Customers) unmarshaller.unmarshal(reader);
 
+            customers = (Customers) unmarshaller.unmarshal(reader);
         } catch (JAXBException | IOException e) {
             System.out.println(e.getMessage());
         }

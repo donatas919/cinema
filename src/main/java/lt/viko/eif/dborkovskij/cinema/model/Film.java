@@ -2,6 +2,10 @@ package lt.viko.eif.dborkovskij.cinema.model;
 
 import javax.xml.bind.annotation.XmlType;
 
+/**
+ * Stores the information about the film.
+ */
+
 @XmlType(propOrder = {"name", "rating", "ageRestriction"})
 public class Film {
     private String name;
